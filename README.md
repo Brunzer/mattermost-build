@@ -69,6 +69,7 @@ Now all `docker` commands on the host will actually run inside the `minikube` VM
 
 ### Build the server in k8s
 ```
+#Back in repo root directory
 make deploy-local
 ```
 
@@ -95,6 +96,11 @@ metadata:
   selfLink: /api/v1/namespaces/default/secrets/build-mattermost-com-jenkins
   uid: 38049232-c16a-11e7-bb92-080027fb5028
 type: Opaque
+```
+
+Decode username
+```
+echo "YWRtaW4=" | base64 --decode
 ```
 
 Decode password
